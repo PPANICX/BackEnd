@@ -1,0 +1,4 @@
+package converters
+
+class PesquisaConverter {
+}
