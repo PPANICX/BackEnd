@@ -1,4 +1,6 @@
 package com.auxilioservico.backend.exceptions
 
-class NotFoundException {
-}
+import kotlin.RuntimeException
+
+class NotFoundException (override val message: String)
+    : RuntimeException()

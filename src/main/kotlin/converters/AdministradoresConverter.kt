@@ -5,7 +5,7 @@ import dtos.AdministradoresDTO
 import org.springframework.stereotype.Component
 
 @Component
-    class AdministardoresConverter {
+    class AdministradoresConverter {
         fun toAdministrador(dto: AdministradoresDTO): Administradores{
 
             return Administradores(

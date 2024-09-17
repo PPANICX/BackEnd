@@ -4,16 +4,15 @@ import com.auxilioservico.backend.converters.AdministradoresConverter
 import com.auxilioservico.backend.dtos.AdministradoresDTO
 import com.auxilioservico.backend.dtos.AdministradoresResponseDTO
 import com.auxilioservico.backend.exceptions.NotFoundException
-import com.auxilioservico.backend.model.Administradores
 import com.auxilioservico.backend.repository.AdministradoresRepository
-import converters.AdministardoresConverter
 import org.springframework.stereotype.Service
 
 private const val ADMINISTRADORES_NOT_FOUND_MESSAGE ="Administrador não encontrado"
 
 @Service
 class AdministradoresService (private val repository: AdministradoresRepository,
-                                val converter: AdministradoresConverter){
+                                val converter: AdministradoresConverter
+){
     fun listar(): List<AdministradoresResponseDTO> {
         return repository.findAll().map(converter::toAdministradorReponseDTO)
     }
