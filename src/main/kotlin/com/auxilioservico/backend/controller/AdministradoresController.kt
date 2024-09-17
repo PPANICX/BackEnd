@@ -58,3 +58,4 @@ class AdministradoresController (private val service: AdministradoresService) {
         service.deletar(id)
     }
 }
+//mano
