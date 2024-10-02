@@ -74,9 +74,14 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.auxilioservico.</groupId>
-			<artifactId>backend</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>7.0.1.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>2.0.1.Final</version>
 		</dependency>
 	</dependencies>
 

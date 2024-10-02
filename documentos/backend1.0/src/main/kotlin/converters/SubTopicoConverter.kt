@@ -1,4 +1,0 @@
-package converters
-
-class SubTopicoConverter {
-}
