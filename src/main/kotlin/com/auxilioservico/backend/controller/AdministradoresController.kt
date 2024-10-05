@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.util.UriComponentsBuilder
 
 
+
 @RestController
 @RequestMapping("/administradores")
 class AdministradoresController (private val service: AdministradoresService) {

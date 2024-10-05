@@ -29,7 +29,7 @@ class PesquisaController (private val service: PesquisaService){
         return service.listar()
     }
 
-    @GetMapping
+    @GetMapping("/{id}")
     fun buscarPorId(@PathVariable id: Long): PesquisaResponseDTO {
         return service.buscarPorId(id)
     }

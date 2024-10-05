@@ -14,7 +14,7 @@ import javax.validation.Valid
 
 
 @RestController
-@RequestMapping("/produtos")
+@RequestMapping("/Topicos")
 class TopicoController (private val service: TopicoService) {
 
     @GetMapping

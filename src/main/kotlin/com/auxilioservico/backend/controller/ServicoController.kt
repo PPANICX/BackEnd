@@ -12,7 +12,7 @@ import javax.validation.Valid
 
 
 @RestController
-@RequestMapping
+@RequestMapping("/servicos")
 class ServicoController (private val service: ServicoService) {
 
     @GetMapping

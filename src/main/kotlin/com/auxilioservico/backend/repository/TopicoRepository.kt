@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository
 
 interface TopicoRepository: JpaRepository<Topico, Long> {
 
-    fun findByNome(nomeTopico: String, paginacao: Pageable): Page<Topico>
+    fun findById(id: Long, paginacao: org.springframework.data.domain.Pageable): Page<Topico>
 
 }

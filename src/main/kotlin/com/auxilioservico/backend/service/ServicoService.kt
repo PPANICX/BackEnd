@@ -5,10 +5,12 @@ import com.auxilioservico.backend.dtos.ServicoDTO
 import com.auxilioservico.backend.dtos.ServicoResponseDTO
 import com.auxilioservico.backend.exceptions.NotFoundException
 import com.auxilioservico.backend.repository.ServicoRepository
+import org.springframework.stereotype.Service
 
 
 private const val SERVICO_NOT_FOUND_MESSAGE = "O Serviço não foi encontrado"
 
+@Service
 class ServicoService (private val repository: ServicoRepository,
                       val converter: com.auxilioservico.backend.converters.ServicoConverter
 ) {
