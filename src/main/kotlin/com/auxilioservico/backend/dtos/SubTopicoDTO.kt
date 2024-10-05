@@ -1,3 +1,9 @@
 package com.auxilioservico.backend.dtos
 
-data class SubTopicoDTO()
+import javax.validation.constraints.NotEmpty
+
+data class SubTopicoDTO(
+    @field:NotEmpty(message = "O SubTopico deve ter um Nome")
+    val nome: String,
+    val servicos: String
+)
