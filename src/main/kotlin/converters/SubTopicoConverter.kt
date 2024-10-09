@@ -10,7 +10,10 @@ class SubTopicoConverter {
     fun toSubTopico(dto: SubTopicoDTO): SubTopico{
         return SubTopico(
             nome = dto.nome,
-            servicos = dto.servicos
+            descricao = dto.descricao,
+            topico = dto.topico,
+            criacao = dto.criacao,
+            ativo = dto.ativo
         )
     }
 }

@@ -9,7 +9,7 @@ class ProblemaConverter {
 
     fun toProblema (dto: ProblemaDTO): Problema{
         return Problema(
-            servico_id = dto.servico_id,
+            servico = dto.servico,
             descricao = dto.descricao,
             status = dto.status,
             criacao = dto.criacao,

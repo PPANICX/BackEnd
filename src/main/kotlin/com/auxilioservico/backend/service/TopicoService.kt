@@ -33,7 +33,10 @@ class TopicoService(private val repository: TopicoRepository,
         val topico = repository.findById(id)
             .orElseThrow{ NotFoundException(TOPICO_NOT_FOUND_MESSAGE) }
             .copy(
-                nome = dto.nome
+                nome = dto.nome,
+                descricao = dto.descricao,
+                criacao = dto.criacao,
+                ativo = dto.ativo
             )
         return converter.toTopicoResponseDTO(repository.save(topico))
     }

@@ -14,7 +14,10 @@ class ServicoConverter {
             descricao = dto.descricao,
             imagem = dto.imagem,
             apiref = dto.apiref,
-            apilocal = dto.apilocal
+            apilocal = dto.apilocal,
+            subTopico = dto.subTopico,
+            ativo = dto.ativo,
+            criacao = dto.criacao
 
         )
     }
@@ -27,7 +30,10 @@ class ServicoConverter {
             brevedesc = servico.brevedesc,
             imagem = servico.imagem,
             apiref = servico.apiref,
-            apilocal = servico.apilocal
+            apilocal = servico.apilocal,
+            subTopico = servico.subTopico,
+            ativo = servico.ativo,
+            criacao = servico.criacao
         )
     }
 

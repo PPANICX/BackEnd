@@ -1,16 +1,15 @@
 package com.auxilioservico.backend.model
 
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
+import jakarta.persistence.*
 import java.time.Instant
+import java.util.Date
 
 @Entity
 data class Pesquisa(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null,
-    val data: String = Instant.now().toString(),
-    val servico_id: String
-
+    val data: Date,
+    @ManyToOne
+    val servico: Servico
 )
+// idbfuiaehf

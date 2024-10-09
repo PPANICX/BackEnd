@@ -11,7 +11,10 @@ class SubTopicoConverter {
     fun toSubTopico(dto: com.auxilioservico.backend.dtos.SubTopicoDTO): SubTopico{
         return SubTopico(
             nome = dto.nome,
-            servicos = dto.servicos
+            descricao = dto.descricao,
+            topico = dto.topico,
+            criacao = dto.criacao,
+            ativo = dto.ativo
         )
     }
 
@@ -19,7 +22,11 @@ class SubTopicoConverter {
         return SubTopicoResponseDTO(
             id = subtopico.id,
             nome = subtopico.nome,
-            servicos = subtopico.servicos
+            descricao = subtopico.descricao,
+            topico = subtopico.topico,
+            criacao = subtopico.criacao,
+            ativo = subtopico.ativo
+
         )
     }
 }

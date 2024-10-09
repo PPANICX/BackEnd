@@ -36,8 +36,8 @@ class PesquisaService (private val repository: PesquisaRepository,
         val pesquisa = repository.findById(id)
             .orElseThrow { NotFoundException(PESQUISA_NOTFOUND_MESSSAGE) }
             .copy(
-                data = dto.data.toString(),
-                servico_id = dto.servico_id.toString(),
+                data = dto.data,
+                servico = dto.servico,
             )
         return converter.toPesquisaResponseDTO(repository.save(pesquisa))
     }

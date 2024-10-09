@@ -34,7 +34,11 @@ class SubTopicoService(private val repository: SubTopicoRepository,
         val subtopico = repository.findById(id)
             .orElseThrow { NotFoundException(SUBTOPICO_NOT_FOUND_MESSAGE) }
             .copy(
-                nome = dto.nome
+                nome = dto.nome,
+                descricao = dto.descricao,
+                topico = dto.topico,
+                criacao = dto.criacao,
+                ativo = dto.ativo
             )
         return converter.toSubtopicoResponseDTO(repository.save(subtopico))
     }

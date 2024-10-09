@@ -1,10 +1,11 @@
 package com.auxilioservico.backend.dtos
 
-import java.time.Instant
+import com.auxilioservico.backend.model.Servico
+import java.util.Date
 
 data class PesquisaResponseDTO(
     val id: Long? = null,
-    val data: String = Instant.now().toString(),
-    val servico_id: String
+    val data: Date,
+    val servico: Servico
 
 )

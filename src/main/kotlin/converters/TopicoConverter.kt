@@ -12,7 +12,9 @@ class TopicoConverter{
 
         return Topico(
             nome = dto.nome,
-            subtop = dto.subtop
+            descricao = dto.descricao,
+            criacao = dto.criacao,
+            ativo = dto.ativo
         )
     }
 }

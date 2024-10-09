@@ -1,9 +1,7 @@
 package com.auxilioservico.backend.model
 
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
+import jakarta.persistence.*
+import java.util.*
 
 
 @Entity
@@ -11,6 +9,10 @@ data class SubTopico (
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null,
     val nome: String,
-    val servicos: String
+    val descricao: String,
+    @ManyToOne
+    val topico: Topico,
+    val criacao: Date,
+    val ativo: Boolean
 
 )

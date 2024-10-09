@@ -5,6 +5,9 @@ import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 
+import jakarta.persistence.ManyToOne
+import java.util.*
+
 @Entity
 data class Servico (
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,5 +17,9 @@ data class Servico (
     val descricao: String,
     val imagem: String,
     val apiref: String,
-    val apilocal: String
+    val apilocal: String,
+    @ManyToOne
+    val subTopico: SubTopico,
+    val ativo: Boolean,
+    val criacao: Date
 )

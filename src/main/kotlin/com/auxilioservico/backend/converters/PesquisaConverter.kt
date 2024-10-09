@@ -9,8 +9,8 @@ class PesquisaConverter {
 
     fun toPesquisa(dto: com.auxilioservico.backend.dtos.PesquisaDTO): Pesquisa{
         return Pesquisa(
-            data = dto.data.toString(),
-            servico_id = dto.servico_id.toString()
+            data = dto.data,
+            servico = dto.servico
         )
     }
 
@@ -18,7 +18,7 @@ class PesquisaConverter {
         return PesquisaResponseDTO(
             id = pesquisa.id,
             data = pesquisa.data,
-            servico_id = pesquisa.servico_id
+            servico = pesquisa.servico
         )
     }
 }

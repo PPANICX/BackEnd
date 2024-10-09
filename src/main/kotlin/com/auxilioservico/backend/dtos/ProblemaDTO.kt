@@ -1,11 +1,12 @@
 package com.auxilioservico.backend.dtos
 
+import com.auxilioservico.backend.model.Servico
 import jakarta.validation.constraints.NotEmpty
 import java.time.Instant
 
 data class ProblemaDTO (
     @field:NotEmpty(message = "O problema deve estar relacionado a um serviço")
-    val servico_id: Int,
+    val servico: Servico,
     @field:NotEmpty(message = "O problema deve ter uma descrição")
     val descricao: String,
     @field:NotEmpty(message = "O problema deve ter um status")

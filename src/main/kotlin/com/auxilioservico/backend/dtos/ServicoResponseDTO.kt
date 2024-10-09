@@ -1,5 +1,8 @@
 package com.auxilioservico.backend.dtos
 
+import com.auxilioservico.backend.model.SubTopico
+import java.util.*
+
 data class ServicoResponseDTO(
 
     val id: Long? = null,
@@ -8,5 +11,8 @@ data class ServicoResponseDTO(
     val descricao: String,
     val imagem: String,
     val apiref: String,
-    val apilocal: String
+    val apilocal: String,
+    val subTopico: SubTopico,
+    val ativo: Boolean,
+    val criacao: Date
 )

@@ -10,7 +10,9 @@ class TopicoConverter {
     fun toTopico(dto: com.auxilioservico.backend.dtos.TopicoDTO): Topico {
         return Topico(
             nome = dto.nome,
-            subtop = dto.subtop
+            descricao = dto.descricao,
+            criacao = dto.criacao,
+            ativo = dto.ativo
         )
 
     }
@@ -19,7 +21,9 @@ class TopicoConverter {
         return TopicoResponseDTO(
             id = topico.id,
             nome = topico.nome,
-            subtop = topico.subtop
+            descricao = topico.descricao,
+            criacao = topico.criacao,
+            ativo = topico.ativo
         )
     }
 }

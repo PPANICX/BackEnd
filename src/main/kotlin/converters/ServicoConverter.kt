@@ -15,7 +15,10 @@ fun toServico(dto: ServicoDTO): Servico {
         descricao = dto.descricao,
         imagem = dto.imagem,
         apiref = dto.apiref,
-        apilocal = dto.apilocal
+        apilocal = dto.apilocal,
+        subTopico = dto.subTopico,
+        ativo = dto.ativo,
+        criacao = dto.criacao
     )
 }
 }
